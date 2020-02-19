@@ -1,6 +1,14 @@
-# Cookiecutter Data Science
+# Cookiecutter Data Science (poetry)
 
 _A logical, reasonably standardized, but flexible project structure for doing and sharing data science work._
+
+#### Package/Dependency Management Options
+
+You can use one of these to manage your dependencies in an isolated environment:
+
+ - [poetry](https://python-poetry.org/)
+ - [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/)
+ - [virtualenv](https://docs.python.org/3.7/library/venv.html)
 
 
 #### [Project homepage](http://drivendata.github.io/cookiecutter-data-science/)

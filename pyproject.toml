@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "cookiecutter-data-science"
+version = "0.1.0"
+description = "A logical, reasonably standardized, but flexible project structure for doing and sharing data science work."
+authors = ["BitJockey <bitjockey@jackpoint.network>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+mkdocs = "^1.0.4"
+mkdocs-cinder = "^1.0.2"
+cookiecutter = "^1.7.0"
+pytest = "^5.3.5"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
