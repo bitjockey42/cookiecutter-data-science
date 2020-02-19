@@ -16,6 +16,12 @@ else
 HAS_CONDA=True
 endif
 
+ifeq (,$(shell which poetry))
+HAS_POETRY=False
+else
+HAS_POETRY=True
+endif
+
 #################################################################################
 # COMMANDS                                                                      #
 #################################################################################
@@ -64,6 +70,13 @@ else
 	conda create --name $(PROJECT_NAME) python=2.7
 endif
 		@echo ">>> New conda env created. Activate with:\nsource activate $(PROJECT_NAME)"
+
+ifeq (True,$(HAS_POETRY))
+		@echo ">>> Detected poetry, creating poetry environment."
+		poetry shell && poetry install
+endif
+		@echo ">>> New poetry environment created. Activate with:\npoetry shell"
+
 else
 	$(PYTHON_INTERPRETER) -m pip install -q virtualenv virtualenvwrapper
 	@echo ">>> Installing virtualenvwrapper if not already installed.\nMake sure the following lines are in shell startup file\n\
