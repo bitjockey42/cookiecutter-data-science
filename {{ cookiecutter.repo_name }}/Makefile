@@ -72,7 +72,7 @@ endif
 		@echo ">>> New conda env created. Activate with:\nsource activate $(PROJECT_NAME)"
 else ifeq (True,$(HAS_POETRY))
 		@echo ">>> Detected poetry, creating poetry environment."
-		poetry shell && poetry install
+		poetry install
 else
 	$(PYTHON_INTERPRETER) -m pip install -q virtualenv virtualenvwrapper
 	@echo ">>> Installing virtualenvwrapper if not already installed.\nMake sure the following lines are in shell startup file\n\
